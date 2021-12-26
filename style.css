@@ -3,32 +3,103 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;1,400&display=swap');
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: 'Jura',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Jura', sans-serif;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 /* end of Commom styles */
 
-/* start of Page-bg */
+/* start of mouse circle */
+
+.mouse-circle {
+  width: 6rem;
+  height: 6rem;
+  border: 0.1rem solid #c7a622;
+    border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%,-50%);
+  animation: mouseCircleAnim 10s
+  infinite linear
+  ;
+  opacity: 0;
 
 
-.page-bg{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/bg.jpg)center no-repeat;
-    background-size: cover;
 }
 
+@keyframes mouseCircleAnim {
+    
+    0%{
+        width:6rem ;
+        height:6rem;
+    }
+    
+    25%{
+        width: 8rem;
+        height:8rem;
+    }
+    35%{
+        width: 4rem;
+        height:4rem;
+    }
+    70%{
+        width:8rem ;
+        height:8rem;
+    }
+    100%{
+        width: 6rem;
+        height:6rem;
+    }
+    
+}
 
+.mouse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #9b0e0e;
+    border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+
+
+}
+
+@keyframes mouseDotAnim{
+    0%{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    55%{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    100%{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
+/* end of mouse circlre */
+
+/* start of Page-bg */
+
+.page-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/bg.jpg) center no-repeat;
+  background-size: cover;
+}
 
 /* end of page-bg */
